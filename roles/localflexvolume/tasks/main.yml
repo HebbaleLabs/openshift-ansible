@@ -14,6 +14,12 @@
 - debug:
     msg: "Device is present: {{ device_is_present }}"
 
+- name: Ensure EPEL is enabled
+  yum:
+    name: epel-release
+    state: present
+  when: device_is_present == true
+
 - name: Install jq package
   package:
     name: jq

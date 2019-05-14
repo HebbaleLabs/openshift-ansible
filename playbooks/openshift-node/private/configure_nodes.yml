@@ -15,6 +15,7 @@
   - role: openshift_node
   - role: tuned
   - role: nickhammond.logrotate
+  - role: awscli
   - role: localflexvolume
   tasks:
   - import_role:
